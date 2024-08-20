@@ -48,7 +48,7 @@
                     </p>
                     <p>
                         <img src="../img/icons/icon_call_big.png" alt="" width="14px;">
-                        <span>+6836743434</span><br>
+                        <span>+62 812 3456 7890</span><br>
                     </p>
                     <p>
                         <img src="../img/icons/icon_place_big.png" alt="" width="14px;">

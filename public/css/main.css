@@ -1792,6 +1792,9 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  background-color: var(--contrast-color);
+}
 .contact .info-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -1888,6 +1891,26 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+.form-textfield {
+  height: 50px;
+  margin-top: 8px;
+  border: 1px solid #000;
+}
+
+.form-textarea {
+  height: 170px;
+  margin-top: 8px;
+  border: 1px solid #000;
+}
+
+/*--------------------------------------------------------------
+# Maps Section
+--------------------------------------------------------------*/
+.maps-section {
+  background-color: var(--background-color);
+}
+
 
 /*--------------------------------------------------------------
 # Starter Section Section

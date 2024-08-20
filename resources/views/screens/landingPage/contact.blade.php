@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Yummy Bootstrap Template</title>
+    <title>News</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -28,225 +28,88 @@
 
     <!-- Main CSS File -->
     <link href="css/main.css" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: Yummy
-  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
-    @include('partials.navbar')
+    @include('partials.navbar-transparent')
 
     <main class="main">
 
         <!-- Hero Section -->
-        <section id="hero" class="hero section light-background">
+        <section id="hero" class="hero section background-img">
 
-            <div class="container banner">
+            <div class="container banner-gallery">
                 <div class="row gy-4 justify-content-center justify-content-lg-between">
                     <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up" class="bold">HEALTHY</h1><br>
-                        <h1 data-aos="fade-up">Gallery</h1>
-                        <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites
-                            with Bootstrap</p>
-                        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                            <a href="#book-a-table" class="btn-get-started">Tentang Kami</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 order-1 order-lg-2 hero-img">
-                        <img src="img/hero-img.png" class="img-fluid" alt="">
+                        <h2 data-aos="fade-up" class="bold secondary-style">KONTAK KAMI</h2><br>
                     </div>
                 </div>
             </div>
 
         </section><!-- /Hero Section -->
 
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <p><span>TENTANG KAMI</span></p>
-                <div class="container" style="width: 600px; margin-top: 30px">
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, lacus et suscipit
-                        vehicula, ligula nulla dictum massa, a iaculis odio purus ut nisi. Fusce sit amet libero a ante
-                        ultrices congue nec et nisi. Nam id justo ut est faucibus tincidunt. Integer efficitur ligula eu
-                        dolor vehicula, a interdum ipsum feugiat. Curabitur ultricies mauris sed magna tempor, sed
-                        tempor elit malesuada. Nulla facilisi. Proin fermentum justo sit amet nisi vehicula, eget
-                        scelerisque nulla sodales.</h6>
-                </div>
-                <br>
-                <div class="container separator-line"></div>
-            </div>
-
-        </section><!-- /About Section -->
-
-        <!-- Food Section -->
-        <section id="food" class="food-section">
-            <div class="row">
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_1.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Makanan Manis</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_2.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Item 1</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_3.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Item 2</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_4.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Item 3</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-            </div>
-        </section><!-- /Food Section -->
-
-        <!-- News Section -->
-        <section id="title" class="title section">
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <p><span>BERITA KAMI</span></p>
-            </div>
-            <div class="news-section">
-                <div class="card mb-3 card-news single-news">
-                    <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div class="information">
-                            <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                            <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-news card-grid">
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="spacer"></div>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- /News Section -->
-
-        <!-- Menu Section -->
-        <section id="gallery-menu" class="gallery-menu section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <p><span>GALERI KAMI</span></p>
-            </div><!-- End Section Title -->
-
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
             <div class="container">
-                <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-                    <div class="tab-pane fade active show" id="menu-starters">
-                        <div class="row gy-3 gx-2">
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-
-                        </div>
-                    </div><!-- End Starter Menu Content -->
-
+                <h4 style="font-weight: bold;">KONTAK KAMI</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control form-textfield" id="exampleInputText"
+                            placeholder="Subject">
+                        <input type="text" class="form-control form-textfield" id="exampleInputText"
+                            placeholder="Name">
+                        <input type="text" class="form-control form-textfield" id="exampleInputText"
+                            placeholder="Email">
+                    </div>
+                    <div class="col-md-6">
+                        <textarea class="form-control form-textarea" id="exampleTextarea" rows="4" placeholder="Message"></textarea>
+                    </div>
                 </div>
-                
-            </div>
-            
-            <div class="d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200" style="margin-top: 40px;">
-                <a href="#book-a-table" class="btn-get-started">Tentang Kami</a>
-            </div>
+                <a href="#book-a-table" class="btn-get-started mt-4 w-100 text-center rounded"
+                    style="height: 50px; font-weight: bold;">KIRIM</a>
 
-        </section><!-- /Menu Section -->
+                <div class="row" style="margin-top: 200px;">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img src="../img/icons/icon_message_circle_big.png" width="50px" class="img-fluid"
+                                alt="">
+                        </div>
+                        <p class="mt-2 text-center"><strong>EMAIL</strong> <br> tastyfood@gmail.com</p>
+                        <p class="text-center"></p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img src="../img/icons/icon_call_circle_big.png" width="50px" class="img-fluid"
+                                alt="">
+                        </div>
+                        <p class="mt-2 text-center"><strong>PHONE</strong> <br> +62 812 3456 7890</p>
+                        <p class="text-center"></p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img src="../img/icons/icon_place_circle_big.png" width="50px" class="img-fluid"
+                                alt="">
+                        </div>
+                        <p class="mt-2 text-center"><strong>LOCATION</strong> <br> Kota Bandung, Jawa Barat</p>
+                        <p class="text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Contact Section -->
+
+        <!-- Contact Section -->
+        <section id="maps" class="maps-section">
+            <div class="mb-5">
+                <iframe style="width: 100%; height: 400px;"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                    frameborder="0" allowfullscreen="" class="ps-4 pe-4"></iframe>
+            </div><!-- End Google Maps -->
+        </section><!-- /Contact Section -->
+
+        
 
     </main>
 
