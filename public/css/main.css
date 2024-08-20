@@ -55,6 +55,15 @@
   --surface-color: #F4F4F4;
 }
 
+.background-img {
+  background-image: url("../img/banners/img_bg_about_small.png");
+}
+
+.secondary-style {
+  color: var(--surface-color);
+  font-weight: bold;
+}
+
 .dark-background {
   --background-color: #1f1f24;
   --default-color: #ffffff;
@@ -306,6 +315,7 @@ h6 {
   .navmenu {
     padding: 0;
   }
+
 
   .navmenu ul {
     margin: 0;
@@ -1349,6 +1359,42 @@ section,
 }
 
 
+.menu-img-small {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.menu-item-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*--------------------------------------------------------------
+# Gallery slider
+--------------------------------------------------------------*/
+.swiper-slide img {
+  width: 900px;
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 10px;
+}
+.swiper-button-prev, .swiper-button-next {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 100%;
+}
+
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1705,7 +1751,6 @@ section,
 
   .gallery .swiper-slide-active {
     background: var(--background-color);
-    border: 6px solid var(--accent-color);
     padding: 4px;
     z-index: 1;
     transform: scale(1.2);
@@ -1816,6 +1861,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
+/* .starter-section { */
   /* Add your styles here */
-}
+/* } */
