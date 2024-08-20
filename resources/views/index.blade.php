@@ -29,13 +29,6 @@
     <!-- Main CSS File -->
     <link href="css/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Yummy
-  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -243,7 +236,7 @@
             </div>
             
             <div class="d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200" style="margin-top: 40px;">
-                <a href="#book-a-table" class="btn-get-started">Tentang Kami</a>
+                <a href="#book-a-table" class="btn-get-started">LIHAT LEBIH BANYAK</a>
             </div>
 
         </section><!-- /Menu Section -->
