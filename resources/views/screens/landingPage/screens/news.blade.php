@@ -33,7 +33,7 @@
 
 <body class="index-page">
 
-    @include('partials.navbar-transparent')
+    @include('screens.landingPage.partials.navbar-transparent')
 
     <main class="main">
 
@@ -200,7 +200,7 @@
         </section><!-- /News Section -->
     </main>
 
-    @include('partials.footer')
+    @include('screens.landingPage.partials.footer')
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i

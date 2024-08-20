@@ -33,7 +33,7 @@
 
 <body class="index-page">
 
-    @include('partials.navbar')
+    @include('screens.landingPage.partials.navbar')
 
     <main class="main">
 
@@ -243,7 +243,7 @@
 
     </main>
 
-    @include('partials.footer')
+    @include('screens.landingPage.partials.footer')
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
