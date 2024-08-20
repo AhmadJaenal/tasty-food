@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Yummy Bootstrap Template</title>
+    <title>News</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -40,80 +40,54 @@
 
 <body class="index-page">
 
-    @include('partials.navbar')
+    @include('partials.navbar-transparent')
 
     <main class="main">
 
         <!-- Hero Section -->
-        <section id="hero" class="hero section light-background">
+        <section id="hero" class="hero section background-img">
 
-            <div class="container banner">
+            <div class="container banner-gallery">
                 <div class="row gy-4 justify-content-center justify-content-lg-between">
                     <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up" class="bold">HEALTHY</h1><br>
-                        <h1 data-aos="fade-up">Gallery</h1>
-                        <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites
-                            with Bootstrap</p>
-                        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                            <a href="#book-a-table" class="btn-get-started">Tentang Kami</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 order-1 order-lg-2 hero-img">
-                        <img src="img/hero-img.png" class="img-fluid" alt="">
+                        <h2 data-aos="fade-up" class="bold secondary-style">TENTANG KAMI</h2><br>
                     </div>
                 </div>
             </div>
 
         </section><!-- /Hero Section -->
 
+
         <!-- About Section -->
         <section id="about" class="about section">
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <p><span>TENTANG KAMI</span></p>
-                <div class="container" style="width: 600px; margin-top: 30px">
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, lacus et suscipit
-                        vehicula, ligula nulla dictum massa, a iaculis odio purus ut nisi. Fusce sit amet libero a ante
-                        ultrices congue nec et nisi. Nam id justo ut est faucibus tincidunt. Integer efficitur ligula eu
-                        dolor vehicula, a interdum ipsum feugiat. Curabitur ultricies mauris sed magna tempor, sed
-                        tempor elit malesuada. Nulla facilisi. Proin fermentum justo sit amet nisi vehicula, eget
-                        scelerisque nulla sodales.</h6>
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="image-news">
+                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+                        <div class="content ps-0 ps-lg-5">
+                            <h2 style="font-weight: bold;">APA SAJA MAKANAN KHAS NUSANTARA?</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam ipsam esse
+                                repudiandae repellendus consequatur nobis optio incidunt! Veniam dignissimos ea
+                                corrupti, explicabo animi nemo illum et earum facilis totam!
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non iure voluptatum sapiente
+                                explicabo dignissimos debitis qui consectetur rerum aliquid, quidem atque, unde ab sint
+                                facere! Veniam officia suscipit et nobis.
+                            </p>
+                            <div class="d-flex" data-aos="fade-up" data-aos-delay="200" style="margin-top: 40px;">
+                                <a href="#book-a-table" class="btn-get-started">BACA SELENGKAPNYA</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <div class="container separator-line"></div>
             </div>
-
         </section><!-- /About Section -->
-
-        <!-- Food Section -->
-        <section id="food" class="food-section">
-            <div class="row">
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_1.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Makanan Manis</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_2.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Item 1</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_3.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Item 2</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-                <div class="card-food column">
-                    <img src="../img/menu/img_menu_4.png" alt="Food Image" class="food-img out-of-container">
-                    <h2 class="food-name">Item 3</h2>
-                    <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        lacus et suscipit vehicula, ligula nulla dictum massa.</p>
-                </div>
-            </div>
-        </section><!-- /Food Section -->
 
         <!-- News Section -->
         <section id="title" class="title section">
@@ -122,19 +96,59 @@
                 <p><span>BERITA KAMI</span></p>
             </div>
             <div class="news-section">
-                <div class="card mb-3 card-news single-news">
-                    <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div class="information">
-                            <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                            <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                <div class="card-news card-grid">
+                    <div class="card mb-3 card-news-grid">
+                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="information">
+                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
+                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-news card-grid">
+                    <div class="card mb-3 card-news-grid">
+                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="information">
+                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
+                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 card-news-grid">
+                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="information">
+                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
+                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 card-news-grid">
+                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="information">
+                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
+                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card mb-3 card-news-grid">
                         <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
                         <div class="card-body">
@@ -191,63 +205,6 @@
                 </div>
             </div>
         </section><!-- /News Section -->
-
-        <!-- Menu Section -->
-        <section id="gallery-menu" class="gallery-menu section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <p><span>GALERI KAMI</span></p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-                <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-                    <div class="tab-pane fade active show" id="menu-starters">
-                        <div class="row gy-3 gx-2">
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-
-                        </div>
-                    </div><!-- End Starter Menu Content -->
-
-                </div>
-                
-            </div>
-            
-            <div class="d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200" style="margin-top: 40px;">
-                <a href="#book-a-table" class="btn-get-started">Tentang Kami</a>
-            </div>
-
-        </section><!-- /Menu Section -->
-
     </main>
 
     @include('partials.footer')
