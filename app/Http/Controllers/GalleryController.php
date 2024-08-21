@@ -8,6 +8,6 @@ class GalleryController extends Controller
 {
     public function gallery()
     {
-        return view("screens.landingPage.screens.gallery");
+        return view("landingPage.pages.gallery");
     }
 }

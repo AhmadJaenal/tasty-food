@@ -8,6 +8,6 @@ class NewsController extends Controller
 {
     public function news()
     {
-        return view("screens.landingPage.screens.news");
+        return view("landingPage.pages.news");
     }
 }

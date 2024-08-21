@@ -8,6 +8,6 @@ class AboutController extends Controller
 {
     public function about()
     {
-        return view("screens.landingPage.screens.about");
+        return view("landingPage.pages.about");
     }
 }

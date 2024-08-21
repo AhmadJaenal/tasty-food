@@ -8,6 +8,6 @@ class ContactController extends Controller
 {
     public function contact()
     {
-        return view("screens.landingPage.screens.contact");
+        return view("landingPage.pages.contact");
     }
 }
