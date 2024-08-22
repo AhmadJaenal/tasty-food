@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Food;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function menu()
+    public function food()
     {
-        return view('dashboard.pages.menu.menu');
+        $foods = Food::all();
+        return view('dashboard.pages.menu.menu', compact('foods'));
     }
 }
