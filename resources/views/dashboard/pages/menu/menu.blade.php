@@ -69,8 +69,7 @@
                                                                         id="desc" placeholder="Description">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label
-                                                                        for="formFile">Image</label>
+                                                                    <label for="formFile">Image</label>
                                                                     <input class="form-control" type="file"
                                                                         id="formFile">
                                                                 </div>
@@ -98,28 +97,30 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="" alt="image" />
-                                                    </td>
-                                                    <td>Messsy</td>
-                                                    <td>53275532</td>
-                                                    <td>15 May 2017</td>
-                                                    <td>15 May 2017</td>
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <button type="submit"
-                                                                class="badge badge-info me-2">Edit</button>
-
-                                                            <form action="" method="POST"
-                                                                onsubmit="return confirm('Are you sure you want to delete this news?');">
-                                                                @csrf
+                                                @foreach ($foods as $food)
+                                                    <tr>
+                                                        <td class="py-1">
+                                                            <img src="" alt="image" />
+                                                        </td>
+                                                        <td>Messsy</td>
+                                                        <td>53275532</td>
+                                                        <td>15 May 2017</td>
+                                                        <td>15 May 2017</td>
+                                                        <td>
+                                                            <div class="d-flex">
                                                                 <button type="submit"
-                                                                    class="badge badge-danger me-2">Delete</button>
-                                                            </form>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                                    class="badge badge-info me-2">Edit</button>
+
+                                                                <form action="" method="POST"
+                                                                    onsubmit="return confirm('Are you sure you want to delete this news?');">
+                                                                    @csrf
+                                                                    <button type="submit"
+                                                                        class="badge badge-danger me-2">Delete</button>
+                                                                </form>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

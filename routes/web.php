@@ -21,13 +21,16 @@ Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-Route::get('/menuDashboard', [MenuController::class, 'menu'])->name('menuDashboard');
+Route::get('/menuDashboard', [MenuController::class, 'food'])->name('menuDashboard');
 Route::get('/newsDashboard', [NewsDashboardController::class, 'newsDashboard'])->name('newsDashboard');
 Route::get('/galleryDashboard', [GalleryDashboardController::class, 'galleryDashboard'])->name('galleryDashboard');
 Route::post('/deleteImage{id_image}', [GalleryDashboardController::class, 'deleteImage'])->name('deleteImage');
 
 Route::post('/deleteNews{id_news}', [NewsDashboardController::class, 'deleteNews'])->name('deleteNews');
 Route::get('/addImage', [GalleryDashboardController::class, 'addImage'])->name('addImage');
+
+
+
 
 
 
