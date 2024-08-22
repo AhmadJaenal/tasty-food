@@ -197,45 +197,24 @@
                 <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
                     <div class="tab-pane fade active show" id="menu-starters">
                         <div class="row gy-3 gx-2">
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-                            
-                            <div class="col-lg-4 menu-item">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img img-fluid" alt=""></a>
-                            </div><!-- Menu Item -->
-
+                            <!-- News Item -->
+                            @foreach ($gallery as $image)
+                                <div class="col-lg-4 menu-item">
+                                    <a href="{{ $image->url_img }}" class="glightbox"><img
+                                            src="{{ $image->url_img }}" class="menu-img img-fluid"
+                                            alt=""></a>
+                                </div>
+                            @endforeach
+                            <!-- News Item -->
                         </div>
                     </div><!-- End Starter Menu Content -->
 
                 </div>
-                
+
             </div>
-            
-            <div class="d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200" style="margin-top: 40px;">
+
+            <div class="d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200"
+                style="margin-top: 40px;">
                 <a href="#book-a-table" class="btn-get-started">LIHAT LEBIH BANYAK</a>
             </div>
 

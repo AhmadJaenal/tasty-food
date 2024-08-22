@@ -146,60 +146,15 @@
                 <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
                     <div class="tab-pane fade active show" id="menu-starters">
                         <div class="gallery-grid">
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
-                            <div class="menu-item-small">
-                                <a href="img/products/img_product_5.jpg" class="glightbox"><img
-                                        src="img/products/img_product_5.jpg" class="menu-img-small img-fluid"
-                                        alt=""></a>
-                            </div><!-- Menu Item -->
-
+                            <!-- Menu Item -->
+                            @foreach ($gallery as $image)
+                                <div class="menu-item-small">
+                                    <a href="{{ $image->url_img }}" class="glightbox"><img
+                                            src="{{ $image->url_img }}" class="menu-img-small img-fluid"
+                                            alt=""></a>
+                                </div>
+                            @endforeach
+                            <!-- Menu Item -->
                         </div>
                     </div><!-- End Starter Menu Content -->
 

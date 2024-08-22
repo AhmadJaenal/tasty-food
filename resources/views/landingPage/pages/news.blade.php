@@ -90,111 +90,20 @@
             </div>
             <div class="news-section">
                 <div class="card-news card-grid">
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                    @foreach ($news as $itemNews)
+                        <div class="card mb-3 card-news-grid">
+                            <img src="{{ $itemNews->url_img }}" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $itemNews->title }} </h5>
+                                <p class="card-text">{{ $itemNews->content }}</p>
+                                <div class="information">
+                                    <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small>
+                                    </p>
+                                    <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 card-news-grid">
-                        <img src="../img/news/img_product_14.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="spacer"></div>
-                            <div class="information">
-                                <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small></p>
-                                <p class="card-text"><small class="text-body-secondary">Setting</small></p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section><!-- /News Section -->
