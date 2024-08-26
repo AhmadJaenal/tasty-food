@@ -11603,7 +11603,7 @@ textarea.is-invalid.tt-hint, .select2-container--default .select2-selection--sin
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #1F3BB3;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #1F3BB3;
+  --bs-btn-disabled-border-color: page-body-wrapper#1F3BB3;
   --bs-gradient: none;
 }
 
@@ -28451,7 +28451,6 @@ dl li {
 }
 
 .content-wrapper {
-  background: #F4F5F7;
   padding: 1.5rem 2.187rem 1.5rem 3.5rem;
   width: 100%;
   -webkit-flex-grow: 1;

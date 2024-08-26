@@ -43,26 +43,24 @@
             <div class="container banner-gallery">
                 <div class="row gy-4 justify-content-center justify-content-lg-between">
                     <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h2 data-aos="fade-up" class="bold secondary-style">TENTANG KAMI</h2><br>
+                        <h2 data-aos="fade-up" class="bold secondary-style">BERITA KAMI</h2><br>
                     </div>
                 </div>
             </div>
-
         </section><!-- /Hero Section -->
 
-
         <!-- About Section -->
-        <section id="about" class="about section">
+        <section id="about" class="about section" style="background-color: #F4F4F4">
             <div class="container">
-                <div class="row gy-4">
+                <div class="row gy-4 d-flex align-items-center">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-news">
                             <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-                        <div class="content ps-0 ps-lg-5">
-                            <h2 style="font-weight: bold;">APA SAJA MAKANAN KHAS NUSANTARA?</h2>
+                        <div class="content ps-0 ps-lg-4  ">
+                            <h3 style="font-weight: bold;">APA SAJA MAKANAN KHAS NUSANTARA?</h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam ipsam esse
                                 repudiandae repellendus consequatur nobis optio incidunt! Veniam dignissimos ea
@@ -83,27 +81,33 @@
         </section><!-- /About Section -->
 
         <!-- News Section -->
-        <section id="title" class="title section">
+        <section id="title" class="title section" style="background-color: #FFFFFF">
             <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <p><span>BERITA KAMI</span></p>
+            <div class="container mb-4" data-aos="fade-up">
+                <h4><strong>BERITA LAINYA</strong></h4>
             </div>
             <div class="news-section">
-                <div class="card-news card-grid">
-                    @foreach ($news as $itemNews)
-                        <div class="card mb-3 card-news-grid">
-                            <img src="{{ $itemNews->url_img }}" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $itemNews->title }} </h5>
-                                <p class="card-text">{{ $itemNews->content }}</p>
-                                <div class="information">
-                                    <p class="card-text"><small class="text-body-secondary">Baca Selengkapnya</small>
-                                    </p>
-                                    <p class="card-text"><small class="text-body-secondary">Setting</small></p>
+                <div class="container">
+                    <div class="row justify-content-start">
+                        @foreach ($news as $itemNews)
+                            <div class="col-lg-3 mb-4">
+                                <div class="card mb-3 card-news-mini">
+                                    <img src="{{ $itemNews->url_img }}" class="card-news-img-mini" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><strong>{{ $itemNews->title }}</strong></h5>
+                                        <p class="card-text">{{ $itemNews->content }}</p>
+                                        <div class="information">
+                                            <a href="">
+                                                <p style="color: #fcb407">Baca Selengkapnya</p>
+                                            </a>
+                                            <a href=""><img src="img/icon_option.png" alt=""
+                                                    width="32px" height="32px"></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </section><!-- /News Section -->

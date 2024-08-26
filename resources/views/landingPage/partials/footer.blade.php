@@ -21,7 +21,7 @@
 
             <div class="col-lg-2 col-md-6 d-flex">
                 <div>
-                    <h3>Useful links</h3>
+                    <h4>Useful links</h4>
                     <p>Blog</p>
                     <p>Hewan</p>
                     <p>Galeri</p>
@@ -31,7 +31,7 @@
 
             <div class="col-lg-2 col-md-6 d-flex">
                 <div>
-                    <h3>Privacy</h3>
+                    <h4>Privacy</h4>
                     <p>Karir</p>
                     <p>Tentang Kami</p>
                     <p>Kontak Kami</p>
@@ -41,7 +41,7 @@
 
             <div class="col-lg-3 col-md-6 d-flex">
                 <div>
-                    <h3>Contact Info</h3>
+                    <h4>Contact Info</h4>
                     <p>
                         <img src="../img/icons/icon_message_big.png" alt="" width="14px;">
                         <span>tastyfood@gmail.com</span><br>

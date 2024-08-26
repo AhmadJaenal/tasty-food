@@ -21,14 +21,64 @@ class GalleryDashboardController extends Controller
     {
         try {
             Gallery::find($id_image)->delete();
-            return redirect()->route('galleryDashboard')->with('successDelete', 'Successfully deleted the image');
+            return redirect()->route('galleryDashboard')->with('success', 'Successfully deleted the image');
         } catch (\Throwable $th) {
-            return redirect()->route('galleryDashboard')->with('failedDelete', 'Failed to delete image');
+            return redirect()->route('galleryDashboard')->with('failed', 'Failed to delete image');
         }
     }
 
-    public function addImage() 
+    public function addImage(Request $request)
     {
-        return view('dashboard.pages.gallery.add_image');
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageName  = time() . '.' . $request->image->extension();
+
+        $request->image->move(public_path('img/gallery_food/'), $imageName);
+
+        $imageUrl = url('img/gallery_food/' . $imageName);
+
+        try {
+            Gallery::create([
+                'url_img' => $imageUrl,
+                'created_at' => Now(),
+                'updated_at' => Now(),
+            ]);
+
+            return back()
+                ->with('success', 'Image uploaded successfully.');
+        } catch (\Throwable $th) {
+            return back()
+                ->with('failed', 'Failed to upload image.');
+        }
+    }
+
+    public function updateImage(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+
+            $food = Gallery::findOrFail($id);
+
+            if ($request->hasFile('image')) {
+                $imageName = time() . '.' . $request->image->extension();
+
+                $request->image->move(public_path('img/gallery_food/'), $imageName);
+
+                $imageUrl = url('img/gallery_food/' . $imageName);
+
+                $food->url_img = $imageUrl;
+            }
+            
+            $food->updated_at = Now();
+            $food->save();
+
+            return back()->with('success', 'Image updated successfully.');
+        } catch (\Throwable $th) {
+            return back()->with('failed', 'Failed to update Image.');
+        }
     }
 }

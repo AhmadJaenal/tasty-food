@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -11,6 +12,8 @@ class LandingPageController extends Controller
     {
 
         $gallery = Gallery::all();
-        return view('index', compact('gallery'));
+        $listNews = News::all();
+        $news = News::first();
+        return view('index', compact('gallery', 'news', 'listNews'));
     }
 }
