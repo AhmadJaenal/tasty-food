@@ -72,7 +72,8 @@ class GalleryDashboardController extends Controller
 
                 $food->url_img = $imageUrl;
             }
-
+            
+            $food->updated_at = Now();
             $food->save();
 
             return back()->with('success', 'Image updated successfully.');

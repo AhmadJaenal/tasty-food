@@ -12,7 +12,8 @@ class LandingPageController extends Controller
     {
 
         $gallery = Gallery::all();
-        $news = News::all();
-        return view('index', compact('gallery', 'news'));
+        $listNews = News::all();
+        $news = News::first();
+        return view('index', compact('gallery', 'news', 'listNews'));
     }
 }

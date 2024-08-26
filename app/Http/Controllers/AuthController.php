@@ -13,15 +13,15 @@ class AuthController extends Controller
         if (Auth::check()) {
             return redirect('dashboard');
         }else{
-            return view('dashboard.pages.auth.sign');
+            return view('dashboard.pages.auth.login');
         }
     }
     
     public function actionLogin(Request $request) 
     {
-        $data = $request->validated([
+        $data = $request->validate([
             'email' => 'required|string|max:500|email',
-            'content' => 'required|string|max:500',
+            'password' => 'required|string|max:500',
         ]);
         
         if (Auth::Attempt($data)) {
@@ -30,5 +30,11 @@ class AuthController extends Controller
             Session::flash('failed', 'Email atau Password Salah');
             return back()->with('failed', 'Email or password is wrong');
         }
+    }
+
+    public function actionlogout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }

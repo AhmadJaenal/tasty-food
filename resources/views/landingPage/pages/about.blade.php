@@ -51,10 +51,10 @@
         </section><!-- /Hero Section -->
 
         <!-- About Section -->
-        <section id="about" class="about section">
+        <section id="about" class="about section" style="background-color: #F4F4F4">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="250">
                         <div class="content ps-0 ps-lg-5">
                             <h2 style="font-weight: bold;">TASTY FOOD</h2>
                             <p style="font-weight: bold">
@@ -71,8 +71,8 @@
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-about">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
+                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
+                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
                         </div>
                     </div>
                 </div>
@@ -83,14 +83,14 @@
         <section id="about" class="about section">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-5 ms-lg-5" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-about">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
+                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
+                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
                         </div>
                     </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-                        <div class="content ps-0 ps-lg-5">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="250">
+                        <div class="content ps-0">
                             <h2 style="font-weight: bold;">TASTY FOOD</h2>
                             <p style="font-weight: bold">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam ipsam esse
@@ -112,7 +112,7 @@
         <section id="about" class="about section">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="250">
                         <div class="content ps-0 ps-lg-5">
                             <h2 style="font-weight: bold;">TASTY FOOD</h2>
                             <p style="font-weight: bold">
@@ -127,7 +127,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-about">
                             <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
                         </div>

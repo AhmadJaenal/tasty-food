@@ -42,12 +42,12 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Gallery</h4>
-                                    @if ($message = Session::get('successDelete'))
+                                    @if ($message = Session::get('success'))
                                         <div id="successAlert" class="alert alert-success" role="alert">
                                             {{ $message }}
                                         </div>
                                     @endif
-                                    @if ($message = Session::get('failedDelete'))
+                                    @if ($message = Session::get('failed'))
                                         <div id="failedAlert" class="alert alert-danger" role="alert">
                                             {{ $message }}
                                         </div>
@@ -66,30 +66,26 @@
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
-                                                    <div class="modal-body">
-                                                        <div class="card-body">
-                                                            <form class="forms-sample">
-                                                                <div class="form-group">
-                                                                    <label for="content">Content
-                                                                    </label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="content" placeholder="Content">
-                                                                </div>
+                                                    <form class="forms-sample" method="POST"
+                                                        enctype="multipart/form-data" action="{{ route('addImage') }}">
+                                                        @csrf
+                                                        <div class="modal-body">
+                                                            <div class="card-body">
                                                                 <div class="form-group">
                                                                     <label
                                                                         for="exampleInputConfirmPassword1">Image</label>
                                                                     <input class="form-control" type="file"
-                                                                        id="formFile">
+                                                                        id="formFile" name="image" required>
                                                                 </div>
-                                                            </form>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="submit" class="badge badge-danger me-2"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="badge badge-info me-2"
-                                                            data-bs-dismiss="modal">Save</button>
-                                                    </div>
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="badge badge-danger me-2"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit"
+                                                                class="badge badge-info me-2">Save</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -109,7 +105,42 @@
                                                         <td>
                                                             <div class="d-flex">
                                                                 <button type="submit"
-                                                                    class="badge badge-info me-2">Edit</button>
+                                                                    class="badge badge-info me-2" data-bs-toggle="modal"
+                                                                    data-bs-target="#editModal">Edit</button>
+
+                                                                    <div class="modal fade" id="editModal" tabindex="-1"
+                                                                    aria-labelledby="editModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h1 class="modal-title fs-5" id="editModalLabel">Update
+                                                                                    Image</h1>
+                                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                                    aria-label="Close"></button>
+                                                                            </div>
+                                                                            <form class="forms-sample" method="POST"
+                                                                            enctype="multipart/form-data" action="{{ route('updateImage', $image->id) }}">
+                                                                                @csrf
+                                                                                <div class="modal-body">
+                                                                                    <div class="card-body">
+                                                                                        <div class="form-group">
+                                                                                            <label
+                                                                                                for="exampleInputConfirmPassword1">Image</label>
+                                                                                            <input class="form-control" type="file"
+                                                                                                id="formFile" name="image">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="submit" class="badge badge-danger me-2"
+                                                                                        data-bs-dismiss="modal">Close</button>
+                                                                                    <button type="submit"
+                                                                                        class="badge badge-info me-2">Save</button>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
                                                                 <form action="{{ route('deleteImage', $image->id) }}"
                                                                     method="POST"

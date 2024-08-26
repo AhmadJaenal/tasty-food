@@ -32,7 +32,7 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                             <div class="brand-logo">
-                               <h3 style="font-weight: bold;">TASYT FOOD</h3>
+                                <h3 style="font-weight: bold;">TASYT FOOD</h3>
                             </div>
                             @if ($message = Session::get('success'))
                                 <div id="successAlert" class="alert alert-success" role="alert">
@@ -44,18 +44,19 @@
                                     {{ $message }}
                                 </div>
                             @endif
-                            <form class="pt-3">
+                            <form class="pt-3" method="post" action="{{ route('actionlogin') }}">
+                                @csrf
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
+                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" name="email"
                                         placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-lg"
-                                        id="exampleInputPassword1" placeholder="Password">
+                                        id="exampleInputPassword1" name="password" placeholder="Password">
                                 </div>
                                 <div class="mt-3 d-grid gap-2">
-                                    <a class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn"
-                                        href="../../index.html">LOGIN</a>
+                                    <button type="submit"
+                                        class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn">LOGIN</a>
                                 </div>
                                 {{-- <div class="text-center mt-4 fw-light"> Don't have an account? <a href="register.html"
                                         class="text-primary">Create</a>

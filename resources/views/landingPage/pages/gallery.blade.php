@@ -53,15 +53,7 @@
 
         <!-- Gallery Section -->
         <section id="gallery" class="gallery section light-background">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Gallery</h2>
-                <p><span>Check</span> <span class="description-title">Our Gallery</span></p>
-            </div><!-- End Section Title -->
-
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
                 <div class="swiper init-swiper">
                     <script type="application/json" class="swiper-config">
                         {
@@ -123,8 +115,6 @@
                                 href="../img/gallery/gallery-8.jpg"><img src="../img/gallery/gallery-8.jpg"
                                     class="img-fluid" alt=""></a></div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
                     <!-- Add Navigation -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>

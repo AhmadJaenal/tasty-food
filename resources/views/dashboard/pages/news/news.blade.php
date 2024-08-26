@@ -40,12 +40,12 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">News List</h4>
-                                    @if ($message = Session::get('successDelete'))
+                                    @if ($message = Session::get('success'))
                                         <div id="successAlert" class="alert alert-success" role="alert">
                                             {{ $message }}
                                         </div>
                                     @endif
-                                    @if ($message = Session::get('failedDelete'))
+                                    @if ($message = Session::get('failed'))
                                         <div id="failedAlert" class="alert alert-danger" role="alert">
                                             {{ $message }}
                                         </div>
@@ -64,35 +64,39 @@
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
-                                                    <div class="modal-body">
-                                                        <div class="card-body">
-                                                            <form class="forms-sample">
+                                                    <form class="forms-sample" method="POST"
+                                                        enctype="multipart/form-data" action="{{ route('addNews') }}">
+                                                        @csrf
+                                                        <div class="modal-body">
+                                                            <div class="card-body">
                                                                 <div class="form-group">
                                                                     <label for="titleNews">Title</label>
                                                                     <input type="text" class="form-control"
-                                                                        id="titleNews" placeholder="Title News">
+                                                                        id="titleNews" name="title"
+                                                                        placeholder="Title News" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="content">Content
                                                                     </label>
                                                                     <input type="text" class="form-control"
-                                                                        id="content" placeholder="Content">
+                                                                        id="content" name="content"
+                                                                        placeholder="Content" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label
                                                                         for="exampleInputConfirmPassword1">Image</label>
                                                                     <input class="form-control" type="file"
-                                                                        id="formFile">
+                                                                        id="formFile" name="image" required>
                                                                 </div>
-                                                            </form>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="submit" class="badge badge-danger me-2"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="badge badge-info me-2"
-                                                            data-bs-dismiss="modal">Save</button>
-                                                    </div>
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="badge badge-danger me-2"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit"
+                                                                class="badge badge-info me-2">Save</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,8 +123,70 @@
                                                         <td> {{ $item->updated_at }} </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <button type="submit"
-                                                                    class="badge badge-info me-2">Edit</button>
+                                                                <button type="submit" class="badge badge-info me-2"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#updateNewsModal">Edit</button>
+
+                                                                <div class="modal fade" id="updateNewsModal"
+                                                                    tabindex="-1" aria-labelledby="updateNewsModalLabel"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h1 class="modal-title fs-5"
+                                                                                    id="updateNewsModalLabel">Add New News
+                                                                                </h1>
+                                                                                <button type="button"
+                                                                                    class="btn-close"
+                                                                                    data-bs-dismiss="modal"
+                                                                                    aria-label="Close"></button>
+                                                                            </div>
+                                                                            <form class="forms-sample" method="POST"
+                                                                                enctype="multipart/form-data"
+                                                                                action="{{ route('updateNews',  $item->id) }}">
+                                                                                @csrf
+                                                                                <div class="modal-body">
+                                                                                    <div class="card-body">
+                                                                                        <div class="form-group">
+                                                                                            <label
+                                                                                                for="titleNews">Title</label>
+                                                                                            <input type="text"
+                                                                                                class="form-control"
+                                                                                                id="titleNews"
+                                                                                                name="title"
+                                                                                                placeholder="Title News" placeholder="Description" value="{{ old('title', $item->title) }}">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label
+                                                                                                for="content">Content
+                                                                                            </label>
+                                                                                            <input type="text"
+                                                                                                class="form-control"
+                                                                                                id="content"
+                                                                                                name="content"
+                                                                                                placeholder="Content" value="{{ old('title', $item->content) }}">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label
+                                                                                                for="exampleInputConfirmPassword1">Image</label>
+                                                                                            <input class="form-control"
+                                                                                                type="file"
+                                                                                                id="formFile"
+                                                                                                name="image" value="{{ old('title', $item->img_url) }}">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="submit"
+                                                                                        class="badge badge-danger me-2"
+                                                                                        data-bs-dismiss="modal">Close</button>
+                                                                                    <button type="submit"
+                                                                                        class="badge badge-info me-2">Save</button>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
                                                                 <form action="{{ route('deleteNews', $item->id) }}"
                                                                     method="POST"

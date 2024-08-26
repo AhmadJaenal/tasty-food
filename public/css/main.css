@@ -13,7 +13,7 @@
 /* Fonts */
 :root {
   --default-font: "Helvetica", sans-serif;
-  --nav-font: "Inter", sans-serif;
+  --nav-font: "Helvetica", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -34,9 +34,9 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #7f7f90;
+  --nav-color: #212529;
   /* The default color of the main navmenu links */
-  --nav-hover-color: #ce1212;
+  --nav-hover-color: #212529;
   /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #F4F4F4;
   /* Used as the background color for mobile navigation menu */
@@ -243,10 +243,12 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: transparent;
   padding: 20px 0;
   transition: all 0.5s;
-  z-index: 997;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header .logo {
@@ -440,6 +442,32 @@ h6 {
     top: 0;
     left: -100%;
     visibility: visible;
+  }
+}
+
+/* Mobile Screen */
+@media (max-width: 500px) {
+  .food-section .card-food {
+    height: 300px;
+    max-width: 250px;
+    margin: 50px auto;
+  }
+
+  .food-name {
+    overflow: hidden;
+  }
+}
+
+/* Desktop Screen */
+@media (min-width: 1000px) {
+  .food-section .card-food {
+    height: 300px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .food-name {
+    overflow: hidden;
   }
 }
 
@@ -842,7 +870,6 @@ section,
 .card-food {
   flex: 1;
   margin: 10px;
-  max-width: 30%;
   height: 350px;
   box-sizing: border-box;
   background-color: #f8f8f8;
@@ -862,23 +889,14 @@ section,
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.food-img {
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  position: relative;
-  align-items: center;
+  white-space: nowrap;
   overflow: hidden;
 }
 
-.out-of-container {
-  position: absolute;
-  transform: translate(20px, -120px);
-  width: 200px;
-  height: auto;
+.food-img {
+  max-height: 200px;
 }
+
 
 /*--------------------------------------------------------------
 # News Section
@@ -924,6 +942,14 @@ section,
 .card-body {
   display: flex;
   flex-direction: column;
+}
+
+.card-news-mini {
+  height: 300px;
+}
+
+.card-news-img-mini {
+  height: 150px;
 }
 
 .information {
@@ -1046,6 +1072,13 @@ section,
   100% {
     transform: translateY(-10px);
   }
+}
+
+.hero-img {
+  text-align: right;
+  margin-top: -200px;
+  margin-right: -300px;
+  width: 800px;
 }
 
 /*--------------------------------------------------------------
@@ -1795,6 +1828,7 @@ section,
 .contact {
   background-color: var(--contrast-color);
 }
+
 .contact .info-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
