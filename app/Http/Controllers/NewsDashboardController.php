@@ -25,19 +25,18 @@ class NewsDashboardController extends Controller
 
     public function addNews(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
-        ]);
-
-        $imageName  = time() . '.' . $request->image->extension();
-
-        $request->image->move(public_path('img/news/'), $imageName);
-
-        $imageUrl = url('img/news/' . $imageName);
-
         try {
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4000',
+                'title' => 'required|string|max:255',
+                'content' => 'required|string',
+            ]);
+
+            $imageName  = time() . '.' . $request->image->extension();
+
+            $request->image->move(public_path('img/news/'), $imageName);
+
+            $imageUrl = url('img/news/' . $imageName);
             News::create([
                 'url_img' => $imageUrl,
                 'title' => $request->title,
@@ -58,7 +57,7 @@ class NewsDashboardController extends Controller
     {
         try {
             $request->validate([
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5000',
                 'title' => 'required|string|max:500',
                 'content' => 'required|string',
             ]);
@@ -74,7 +73,7 @@ class NewsDashboardController extends Controller
 
                 $news->url_img = $imageUrl;
             }
-            
+
             $news->title = $request->title;
             $news->content = $request->content;
             $news->updated_at = Now();
