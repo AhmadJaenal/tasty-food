@@ -90,30 +90,11 @@
                         }
                     </script>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-1.jpg"><img src="../img/gallery/gallery-1.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-2.jpg"><img src="../img/gallery/gallery-2.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-3.jpg"><img src="../img/gallery/gallery-3.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-4.jpg"><img src="../img/gallery/gallery-4.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-5.jpg"><img src="../img/gallery/gallery-5.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-6.jpg"><img src="../img/gallery/gallery-6.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-7.jpg"><img src="../img/gallery/gallery-7.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="" data-gallery="images-gallery"
-                                href="../img/gallery/gallery-8.jpg"><img src="../img/gallery/gallery-8.jpg"
-                                    class="img-fluid" alt=""></a></div>
+                        @foreach ($imageSlider as $image)
+                            <div class="swiper-slide"><a class="" data-gallery="images-gallery"
+                                    href="{{ $image->url_img }}"><img src="{{ $image->url_img }}" class="img-fluid"
+                                        alt=""></a></div>
+                        @endforeach
                     </div>
                     <!-- Add Navigation -->
                     <div class="swiper-button-prev"></div>
@@ -139,9 +120,8 @@
                             <!-- Menu Item -->
                             @foreach ($gallery as $image)
                                 <div class="menu-item-small">
-                                    <a href="{{ $image->url_img }}" class="glightbox"><img
-                                            src="{{ $image->url_img }}" class="menu-img-small img-fluid"
-                                            alt=""></a>
+                                    <a href="{{ $image->url_img }}" class="glightbox"><img src="{{ $image->url_img }}"
+                                            class="menu-img-small img-fluid" alt=""></a>
                                 </div>
                             @endforeach
                             <!-- Menu Item -->
