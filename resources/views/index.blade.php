@@ -88,28 +88,28 @@
                 <div class="card-food column position-relative">
                     <img src="../img/menu/img_menu_1.png" alt="Food Image"
                         class="img-fluid food-img position-absolute top-0 start-50 translate-middle">
-                    <h2 class="food-name">Makanan Manis</h2>
+                    <h2 class="food-name">Item 1</h2>
                     <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
                         lacus et suscipit vehicula, ligula nulla dictum massa.</p>
                 </div>
                 <div class="card-food column position-relative">
                     <img src="../img/menu/img_menu_2.png" alt="Food Image"
                         class="img-fluid food-img position-absolute top-0 start-50 translate-middle">
-                    <h2 class="food-name">Item 1</h2>
+                    <h2 class="food-name">Item 2</h2>
                     <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
                         lacus et suscipit vehicula, ligula nulla dictum massa.</p>
                 </div>
                 <div class="card-food column position-relative">
                     <img src="../img/menu/img_menu_3.png" alt="Food Image"
                         class="img-fluid food-img position-absolute top-0 start-50 translate-middle">
-                    <h2 class="food-name">Item 2</h2>
+                    <h2 class="food-name">Item 3</h2>
                     <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
                         lacus et suscipit vehicula, ligula nulla dictum massa.</p>
                 </div>
                 <div class="card-food column position-relative">
                     <img src="../img/menu/img_menu_4.png" alt="Food Image"
                         class="img-fluid food-img position-absolute top-0 start-50 translate-middle">
-                    <h2 class="food-name">Item 3</h2>
+                    <h2 class="food-name">Item 4</h2>
                     <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
                         lacus et suscipit vehicula, ligula nulla dictum massa.</p>
                 </div>
@@ -123,9 +123,9 @@
                 <p><span>BERITA KAMI</span></p>
             </div>
             <div class="news-section">
-                <div class="card mb-3 col-sm-4 card-news single-news">
-                    @if ($news)
-                        <img src="{{ $news->url_img }}" class="card-img-top" alt="" height="450px">
+                @if ($news)
+                    <div class="card mb-3 col-sm-4 card-news single-news">
+                        <img src="{{ $news->url_img }}" class="img-news" alt="" height="450px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $news->title }}</h5>
                             <p class="card-text">{{ $news->content }}</p>
@@ -137,12 +137,12 @@
                                         height="32px"></a>
                             </div>
                         </div>
-                    @endif
-                </div>
+                    </div>
+                @endif
                 <div class="card-news card-grid">
                     @foreach ($listNews as $news)
                         <div class="card mb-3 card-news-grid" style="height: 500px">
-                            <img src="{{ $news->url_img }}" class="card-img-top" alt="" height="250px">
+                            <img src="{{ $news->url_img }}" class="img-news" alt="" height="250px">
                             <div class="card-body">
                                 <h5 class="card-title"> {{ $news->title }}</h5>
                                 <p class="card-text"> {{ $news->content }}</p>
@@ -166,16 +166,20 @@
             <div class="container section-title" data-aos="fade-up">
                 <p><span>GALERI KAMI</span></p>
             </div><!-- End Section Title -->
+
             <div class="container">
                 <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
                     <div class="tab-pane fade active show" id="menu-starters">
                         <div class="row gy-3 gx-2 justify-content-around">
                             <!-- News Item -->
                             @foreach ($gallery as $image)
-                                <div class="col-lg-4 menu-item">
-                                    <a href="{{ $image->url_img }}" class="glightbox"><img
-                                            src="{{ $image->url_img }}" class="menu-img img-fluid"
-                                            alt=""></a>
+                                <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+                                    <div class="menu-item">
+                                        <a href="{{ $image->url_img }}" class="glightbox">
+                                            <img src="{{ $image->url_img }}" class="menu-img img-fluid"
+                                                alt="">
+                                        </a>
+                                    </div>
                                 </div>
                             @endforeach
                             <!-- News Item -->
@@ -186,9 +190,8 @@
 
             <div class="d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200"
                 style="margin-top: 40px;">
-                <a href="#book-a-table" class="btn-get-started">LIHAT LEBIH BANYAK</a>
+                <a href="{{route('gallery')}}" class="btn-get-started">LIHAT LEBIH BANYAK</a>
             </div>
-
         </section><!-- /Menu Section -->
 
     </main>
