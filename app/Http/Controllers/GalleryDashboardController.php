@@ -29,17 +29,18 @@ class GalleryDashboardController extends Controller
 
     public function addImage(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
-        $imageName  = time() . '.' . $request->image->extension();
-
-        $request->image->move(public_path('img/gallery_food/'), $imageName);
-
-        $imageUrl = url('img/gallery_food/' . $imageName);
-
         try {
+
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4000',
+            ]);
+
+            $imageName  = time() . '.' . $request->image->extension();
+
+            $request->image->move(public_path('img/gallery_food/'), $imageName);
+
+            $imageUrl = url('img/gallery_food/' . $imageName);
+
             Gallery::create([
                 'url_img' => $imageUrl,
                 'created_at' => Now(),
@@ -72,7 +73,7 @@ class GalleryDashboardController extends Controller
 
                 $food->url_img = $imageUrl;
             }
-            
+
             $food->updated_at = Now();
             $food->save();
 

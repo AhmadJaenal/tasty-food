@@ -11,8 +11,8 @@ class LandingPageController extends Controller
     public function landingPage() 
     {
 
-        $gallery = Gallery::all();
-        $listNews = News::all();
+        $gallery = Gallery::take(6)->get();
+        $listNews = News::skip(1)->take(4)->get();
         $news = News::first();
         return view('index', compact('gallery', 'news', 'listNews'));
     }

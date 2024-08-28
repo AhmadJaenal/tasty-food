@@ -71,8 +71,8 @@
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-about">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
+                            <img src="..\img\products\img_product_5.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
+                            <img src="..\img\news\img_product_14.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
                         </div>
                     </div>
                 </div>
@@ -85,8 +85,8 @@
                 <div class="row gy-4">
                     <div class="col-lg-5 ms-lg-5" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-about">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="" style="height: 350px;">
+                            <img src="..\img\products\img_product_7.jpg" class="img-fluid mb-4" alt="" style="height: 250px;">
+                            <img src="..\img\products\img_product_3.jpg" class="img-fluid mb-4" alt="" style="height: 250px;">
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="250">
@@ -129,7 +129,7 @@
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-about">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
+                            <img src="..\img\news\img_product_13.jpg" class="img-fluid mb-4" alt="">
                         </div>
                     </div>
                 </div>

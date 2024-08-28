@@ -55,7 +55,7 @@
                 <div class="row gy-4 d-flex align-items-center">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="image-news">
-                            <img src="..\img\about.jpg" class="img-fluid mb-4" alt="">
+                            <img src="..\img\news\img_product_12.jpg" class="img-fluid mb-4" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">

@@ -132,8 +132,8 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="modal-footer">
-                                                                                    <button type="submit" class="badge badge-danger me-2"
-                                                                                        data-bs-dismiss="modal">Close</button>
+                                                                                    <button type="button" class="badge badge-danger me-2" data-bs-dismiss="modal"
+                                                                                    aria-label="Close">Close</button>
                                                                                     <button type="submit"
                                                                                         class="badge badge-info me-2">Save</button>
                                                                                 </div>

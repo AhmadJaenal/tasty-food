@@ -18,6 +18,8 @@
           <li class="nav-item"> <a class="nav-link" href="{{ route("galleryDashboard") }}">Gallery</a></li>
           <li class="nav-item"> <a class="nav-link" href="{{ route("newsDashboard") }}">News</a></li>
           <li class="nav-item"> <a class="nav-link" href="{{ route("menuDashboard") }}">Menu</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{ route("contactDashboard") }}">Contact</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{ route("slider") }}">Slider</a></li>
         </ul>
       </div>
     </li>

@@ -53,63 +53,79 @@
         <section id="contact" class="contact section">
             <div class="container">
                 <h4 style="font-weight: bold;">KONTAK KAMI</h4>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control form-textfield" id="exampleInputText"
-                            placeholder="Subject">
-                        <input type="text" class="form-control form-textfield" id="exampleInputText"
-                            placeholder="Name">
-                        <input type="text" class="form-control form-textfield" id="exampleInputText"
-                            placeholder="Email">
+                @if ($message = Session::get('success'))
+                    <div id="successAlert" class="alert alert-success" role="alert">
+                        {{ $message }}
                     </div>
-                    <div class="col-md-6">
-                        <textarea class="form-control form-textarea" id="exampleTextarea" rows="4" placeholder="Message"></textarea>
+                @endif
+                @if ($message = Session::get('failed'))
+                    <div id="failedAlert" class="alert alert-danger" role="alert">
+                        {{ $message }}
                     </div>
-                </div>
-                <a href="#book-a-table" class="btn-get-started mt-4 w-100 text-center rounded"
-                    style="height: 50px; font-weight: bold;">KIRIM</a>
-
+                @endif
+                <form action="{{ route('sendEmail') }}" method="POST">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control form-textfield" id="subject" name="subject"
+                                placeholder="Subject" required>
+                            <input type="text" class="form-control form-textfield" id="name" name="name"
+                                placeholder="Name" required>
+                            <input type="text" class="form-control form-textfield" id="email" name="email"
+                                placeholder="Email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea class="form-control form-textarea" id="message" name="message" rows="4" placeholder="Message"
+                                required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-get-started mt-4 w-100 text-center rounded"
+                        style="height: 50px; font-weight: bold;">KIRIM</button>
+                </form>
                 <div class="row" style="margin-top: 200px;">
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="../img/icons/icon_message_circle_big.png" width="50px" class="img-fluid"
-                                alt="">
+                    @if ($contact)
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <img src="../img/icons/icon_message_circle_big.png" width="50px" class="img-fluid"
+                                    alt="">
+                            </div>
+                            <p class="mt-2 text-center"><strong>EMAIL</strong> <br> {{ $contact->email }}</p>
+                            <p class="text-center"></p>
                         </div>
-                        <p class="mt-2 text-center"><strong>EMAIL</strong> <br> tastyfood@gmail.com</p>
-                        <p class="text-center"></p>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="../img/icons/icon_call_circle_big.png" width="50px" class="img-fluid"
-                                alt="">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <img src="../img/icons/icon_call_circle_big.png" width="50px" class="img-fluid"
+                                    alt="">
+                            </div>
+                            <p class="mt-2 text-center"><strong>PHONE</strong> <br> {{ $contact->phone_number }}</p>
+                            <p class="text-center"></p>
                         </div>
-                        <p class="mt-2 text-center"><strong>PHONE</strong> <br> +62 812 3456 7890</p>
-                        <p class="text-center"></p>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="../img/icons/icon_place_circle_big.png" width="50px" class="img-fluid"
-                                alt="">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <img src="../img/icons/icon_place_circle_big.png" width="50px" class="img-fluid"
+                                    alt="">
+                            </div>
+                            <p class="mt-2 text-center"><strong>LOCATION</strong> <br> {{ $contact->location }} </p>
+                            <p class="text-center"></p>
                         </div>
-                        <p class="mt-2 text-center"><strong>LOCATION</strong> <br> Kota Bandung, Jawa Barat</p>
-                        <p class="text-center"></p>
-                    </div>
+                    @endif
                 </div>
             </div>
         </section><!-- /Contact Section -->
 
-        <!-- Contact Section -->
+        <!-- Blade Template -->
         <section id="maps" class="maps-section">
             <div class="mb-5">
-                <iframe style="width: 100%; height: 400px;"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                    frameborder="0" allowfullscreen="" class="ps-4 pe-4"></iframe>
+                <!-- Simpan lokasi dalam atribut data -->
+                <div id="map-container" data-location="{{ $contact['location'] ?? 'Bandung' }}">
+                    <iframe id="mapFrame" style="width: 100%; height: 400px;" src="" frameborder="0"
+                        allowfullscreen="" class="ps-4 pe-4"></iframe>
+                </div>
             </div><!-- End Google Maps -->
         </section><!-- /Contact Section -->
 
-        
 
     </main>
 
@@ -130,9 +146,30 @@
     <script src="vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Main JS File -->
     <script src="js/main.js"></script>
 
+    <script src="js/maps.js"></script>
+
+    <script>
+        function sendMessage() {
+            const form = document.getElementById('messageForm');
+            const formData = new FormData(form);
+
+            fetch('/send-message', {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerHTML = data.message;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
 </body>
 
 </html>
