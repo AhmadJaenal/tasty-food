@@ -134,7 +134,7 @@
                                                                         <div class="modal-content">
                                                                             <div class="modal-header">
                                                                                 <h1 class="modal-title fs-5"
-                                                                                    id="updateNewsModalLabel">Add New News
+                                                                                    id="updateNewsModalLabel">Edit News
                                                                                 </h1>
                                                                                 <button type="button"
                                                                                     class="btn-close"
@@ -177,7 +177,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="modal-footer">
-                                                                                    <button type="submit"
+                                                                                    <button type="button"
                                                                                         class="badge badge-danger me-2"
                                                                                         data-bs-dismiss="modal">Close</button>
                                                                                     <button type="submit"
